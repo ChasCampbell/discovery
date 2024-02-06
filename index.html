@@ -16,72 +16,40 @@
     margin-right: auto;
     justify-content: center;
 	}
-  .wrap {
-    grid-area: 1 /1 / 2 / 2;
-    display: grid;
-    justify-content: center;
-  }
-  .leaders {
-    padding: 0 20px 0 20px;
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
-    display: grid;
-    grid-template-columns: 10% 30% 10% 10% 10% 10% 10% 10%; 
-    justify-content: center;
-    margin-bottom: 5px;
-  }
 	.header {
-    grid-area: 1 / 2 /2 /3;
+    grid-area: 1 / 1 /2 /2;
     display: grid;
     width: 100%;
 		text-align: center;
 	}
   .logo {
-    margin: 0 auto 0 auto;
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
+    margin: 20px auto 0 auto;
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
   }
 	h1 {
-    grid-row: 2 / 3;
     width: 100%;
 		font-size: 24px;
-		margin: 0 auto 0 auto;
+		margin: 10px auto 20px auto;
     font-family: Arial;
 	}
-  .filler {
-    grid-row: 3 /4;
-    height: 40px;
-  }
-  #henry {
+
+  .wrap {
+    grid-area: 2 /1 / 3 / 2;
     display: grid;
-    grid-row: 1 / 2;
-    grid-column: 3 / 4;
+    justify-content: center;
   }
-  #donna {
-    display: grid;
+ .leaders {
     grid-row: 1 / 2;
-    grid-column: 4 / 5;
-  }
-  #brenda {
     display: grid;
-    grid-row: 1 / 2;
-    grid-column: 5 / 6;
-  }
-  #frances {
-    display: grid;
-    grid-row: 1 / 2;
-    grid-column: 6 / 7;
-  }
-    #terry {
-    display: grid;
-    grid-row: 1 / 2;
-    grid-column: 7 / 8;
+    grid-template-columns: 100%; 
+    justify-content: center;
+    margin-bottom: 5px;
   }
   .members {
-    padding: 0 20px 0 20px;
     display: grid;
     grid-row: 2 / 3;
-    grid-template-columns:10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-columns: 100%;
     justify-content: center;
     margin-bottom: 10px;
   }
@@ -89,13 +57,13 @@
     display: grid;
     justify-self: center;
     justify-content: center;
-    width: 135px;
+    width: 150px;
     grid-template-rows: auto 26px 20px 20px;
     margin-bottom: 1px;
   }
   .pic {
-    width: 60px;
-    height: 90px;
+    width: 100px;
+    height: 150px;
     margin-left: auto;
     margin-right: auto;
     border-style: solid;
@@ -104,8 +72,8 @@
     }
   .pic:hover {
     transition: transform .5s;
-    width: 120px;
-    height: 180px;
+    width: 200px;
+    height: 300px;
   }
   .name {
     margin: 6px 0 6px 0;
@@ -119,15 +87,14 @@
     text-align: center;
   }
 
-/*
-  /* Tooltip container 
+  /* Tooltip container */
 .tooltip {
   font-size: 12px;
   color: #737373;
   margin: 5px 0 0 0;
   text-align: center;
 }
-/* Tooltip text 
+/* Tooltip text */
 .tooltiptext {
   font-size: 14px;
   padding: 5px 5px 5px 5px;
@@ -142,11 +109,10 @@
   position: absolute;
   z-index: 1;
 }
-/* Show the tooltip text when you mouse over the tooltip container 
+/* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
-*/
 .list {
   margin-left: auto;
   margin-right: auto;
@@ -165,59 +131,101 @@ h2 {
   grid-row: 4 / 5;
 }
 .list {
-  margin: 0 auto 50px auto;
+  margin: 0 auto 0 auto;
 }
 
-
+@media only screen and (min-width: 360px) {
+  .leaders { grid-template-columns:50% 50% };
+}
+@media only screen and (min-width: 360px) {
+  .members { grid-template-columns:50% 50%};
+}
+@media only screen and (min-width: 600px) {
+  .leaders { grid-template-columns:33% 34% 33% };
+}
+@media only screen and (min-width: 600px) {
+  .members { grid-template-columns:33% 34% 33%};
+}
+@media only screen and (min-width: 770px) {
+  .members { grid-template-columns:25% 25% 25% 25%};
+}
+@media only screen and (min-width: 920px) {
+  .leaders { grid-template-columns:20% 20% 20% 20% 20% };
+}
+@media only screen and (min-width: 920px) {
+  .members { grid-template-columns:20% 20% 20% 20% 20%};
+}
+@media only screen and (min-width: 1070px) {
+  .leaders { grid-template-columns:20% 20% 20% 20% 20% };
+}
+@media only screen and (min-width: 1070px) {
+  .members { grid-template-columns:16% 17% 17% 17% 17% 16%};
+}
+@media only screen and (min-width: 1220px) {
+  .leaders { grid-template-columns:20% 20% 20% 20% 20% };
+}
+@media only screen and (min-width: 1220px) {
+  .members { grid-template-columns:15% 14% 14% 14% 14% 14% 15%};
+}
+@media only screen and (min-width: 1370px) {
+  .leaders { grid-template-columns:20% 20% 20% 20% 20% };
+}
+@media only screen and (min-width: 1370px) {
+  .members { grid-template-columns:12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5% 12.5%};
+}
+@media only screen and (min-width: 1520px) {
+  .members { grid-template-columns:11% 11% 11% 11% 12% 11% 11% 11% 11%};
+}
+@media only screen and (min-width: 1670px) {
+  .members { grid-template-columns:10% 10% 10% 10% 10% 10% 10% 10% 10% 10%};
+}
 
 </style>
 </head>
 <body>
-
+  <div class="header">
+    <img class="logo" src="ssumc_logo 2.jpg" alt="St Stephen Logo">
+    <h1>Discovery Class</h1>
+  </div>
   <div class="wrap">
     <div class="leaders">
-      <div class="header">
-        <img class="logo" src="ssumc_logo 2.jpg" alt="St Stephen Logo">
-        <h1>Discovery Class</h1>
-        <div class="filler"></div>
-      </div>
-      <div class="individuals" id="henry">
+      <div class="individuals">
         <img class="pic" src="individuals/Chiu, Henry.jpg" alt="Henry Chiu photo"/>
           <p class="name">
           Henry Chiu
           </p>
           <p class="position">
-            Co-leader
+          Co-leader
           </p>
-      </div>  
-      <div class="individuals" id="donna">
+      </div>
+      <div class="individuals">
         <img class="pic" src="individuals/Varner, Donna.jpg" alt="Donna Varner photo"/>
           <p class="name">
           Donna Varner
           </p>
           <p class="position">
-            Co-leader
+          Co-Leader
           </p>
-      </div> 
-      <div class="individuals" id="brenda">
+      </div>
+      <div class="individuals">
         <img class="pic" src="individuals/Brantley, Brenda.jpg" alt="Brenda Brantley photo"/>
           <p class="name">
           Brenda Brantley
           </p>
-           <p class="position">
-            Secretary
+          <p class="position">
+          Seretary
           </p>
-      </div> 
-      <div class="individuals" id="frances">
+      </div>
+      <div class="individuals">
         <img class="pic" src="individuals/Schumaker, Frances.jpg" alt="Frances Schumaker photo"/>
           <p class="name">
           Frances Schumaker
           </p>
           <p class="position">
-            Treasurer
+          Treasurer
           </p>
       </div>
-      <div class="individuals" id="terry">
+      <div class="individuals">
         <img class="pic" src="individuals/Brooks, Terry.jpg" alt="Terry Brooks photo"/>
           <p class="name">
           Terry Brooks
@@ -233,17 +241,32 @@ h2 {
           <p class="name">
           Amy Bisette
           </p>
-           <p class="position">
-          
-          </p>
+          <!--
+          <p class="tooltip">
+          Personal Info
+          <span class="tooltiptext">
+            St. Stephen member since 1994.<br>
+            Married to Philip Bissette; three children in their 20s.<br>
+            Born in Winston-Salem; in Charlotte 30 years.<br>
+            UNC Chapel Hill undergraduate and graduate school.<br>
+            After more than 20 years with hospice, I started and currently am owner/therapist at ASB Counseling Services.<br>
+            I enjoy hiking and any time spent with Philip and our kids.
+          </span>
+          </p> -->
       </div>
       <div class="individuals">
         <img class="pic" src="individuals/Bisette, Phillip.jpg" alt="Phillip Bisette photo"/>
           <p class="name">
           Phillip Bisette
           </p>
-           <p class="position">
-          
+      </div>
+      <div class="individuals">
+        <img class="pic" src="individuals/Brantley, Brenda.jpg" alt="Brenda Brantley photo"/>
+          <p class="name">
+          Brenda Brantley
+          </p>
+          <p class="position">
+          Secretary
           </p>
       </div>
       <div class="individuals">
@@ -251,16 +274,13 @@ h2 {
           <p class="name">
           Gail Brooks
           </p>
-           <p class="position">
-          
-          </p>
       </div>
       <div class="individuals">
         <img class="pic" src="individuals/Campbell, Chas.jpg" alt="Chas Campbell photo"/>
           <p class="name">
           Chas Campbell
-        </p>
- <!--          <p class="tooltip">
+          <!--
+           <p class="tooltip">
           Personal Info
           <span class="tooltiptext">
           Born: Chattanooga: TN<br>
@@ -271,10 +291,7 @@ h2 {
           Music: Willie Nelson, Jimmy Buffet, Show Tunes, Lenore Troia<br>
           Movies: Mystery, Action, The Princess Bride<br>
           Current Interests: What Did Jesus Teach?
-          </span>
-          </p>  -->
-           <p class="position">
-          
+          </span> -->
           </p>
       </div>
       <div class="individuals">
@@ -282,17 +299,11 @@ h2 {
           <p class="name">
           Gail Card
           </p>
-          <p class="position">
-          
-          </p>
       </div>
       <div class="individuals">
         <img class="pic" src="individuals/Coggin, Cinda.jpg" alt="Cinda Coggin photo"/>
           <p class="name">
           Cinda Coggin
-          </p>
-          <p class="position">
-          
           </p>
       </div>
       <div class="individuals">
@@ -300,17 +311,11 @@ h2 {
           <p class="name">
           Karen DuBose
           </p>
-           <p class="position">
-          
-          </p>
       </div>
       <div class="individuals">
         <img class="pic" src="individuals/Dunn, Charlotte.jpg" alt="Charlotte Dunn photo"/>
           <p class="name">
           Charlotte Dunn
-          </p>
-           <p class="position">
-          
           </p>
       </div>
       <div class="individuals">
@@ -318,17 +323,11 @@ h2 {
           <p class="name">
           Carolyn Faulkner
           </p>
-          <p class="position">
-          
-          </p>
       </div>
       <div class="individuals">
         <img class="pic" src="individuals/Lambert, Clonnie.jpg" alt="Clonnie Lambert photo"/>
           <p class="name">
           Clonnie Lambert
-          </p>
-          <p class="position">
-          
           </p>
       </div>
       <div class="individuals">
@@ -336,39 +335,29 @@ h2 {
           <p class="name">
           George Linfors
           </p>
-          <p class="position">
-          
-          </p>
       </div>
       <div class="individuals">
         <img class="pic" src="individuals/Linfors, Linda.jpg" alt="Linda Linfors photo"/>
           <p class="name">
           Linda Linfors
           </p>
-          <p class="position">
-          
-          </p>
       </div>
-      <div class="individuals" id="melanie">
+      <div class="individuals">
         <img class="pic" src="individuals/Mason, Melanie.jpg" alt="Melanie Mason photo"/>
           <p class="name">
           Melanie Mason
           </p>
-      </div>
-      <div class="individuals">
+      </div> 
+       <div class="individuals">
         <img class="pic" src="individuals/Mercer, Janet.jpg" alt="Janet Mercer photo"/>
           <p class="name">
           Janet Mercer
           </p>
-
-      </div>             
+      </div>      
       <div class="individuals">
         <img class="pic" src="individuals/Noblitt, Linda.jpg" alt="Linda Noblitt photo"/>
           <p class="name">
           Linda Noblitt
-          </p>
-           <p class="position">
-          
           </p>
       </div>
       <div class="individuals">
@@ -376,17 +365,11 @@ h2 {
           <p class="name">
           Bill Pendleton
           </p>
-           <p class="position">
-          
-          </p>
       </div>
       <div class="individuals">
         <img class="pic" src="individuals/Pendelton, Debbie.jpg" alt="Debbie Pendelton photo"/>
           <p class="name">
           Debbie Pendelton
-          </p>
-           <p class="position">
-          
           </p>
       </div>
       <div class="individuals">
@@ -394,17 +377,11 @@ h2 {
           <p class="name">
           Barry Peterson
           </p>
-          <p class="position">
-          
-          </p>
       </div>
       <div class="individuals">
         <img class="pic" src="individuals/Peterson, Laura.jpg" alt="Laura Peterson photo"/>
           <p class="name">
           Laura Peterson
-          </p>
-          <p class="position">
-          
           </p>
       </div>
       <div class="individuals">
@@ -412,32 +389,17 @@ h2 {
           <p class="name">
           Pauline Ross
           </p>
-           <p class="position">
-          
-          </p>
       </div>
       <div class="individuals">
         <img class="pic" src="individuals/Scott, Randy.jpg" alt="Randy Scott photo"/>
           <p class="name">
           Randy Scott
           </p>
-          <p class="position">
-          
-          </p>
-      </div>
-      <div class="individuals" id="jane">
-        <img class="pic" src="individuals/Solomon, Jane.jpg" alt="Jane Solomon photo"/>
-          <p class="name">
-          Jane Solomon
-          </p>
-      </div>
+      </div>  
       <div class="individuals">
         <img class="pic" src="individuals/Sloan, Cindy.jpg" alt="Cindy Sloan photo"/>
           <p class="name">
           Cindy Sloan
-          </p>
-          <p class="position">
-          
           </p>
       </div>
       <div class="individuals">
@@ -445,8 +407,11 @@ h2 {
           <p class="name">
           Bruce Solomon
           </p>
-          <p class="position">
-          
+      </div>
+      <div class="individuals">
+        <img class="pic" src="individuals/Solomon, Jane.jpg" alt="Jane Solomon photo"/>
+          <p class="name">
+          Jane Solomon
           </p>
       </div>
       <div class="individuals">
@@ -454,17 +419,11 @@ h2 {
           <p class="name">
           Chip Stout
           </p>
-          <p class="position">
-          
-          </p>
       </div>
       <div class="individuals">
         <img class="pic" src="individuals/Stout, Jane.jpg" alt="Jane Stout photo"/>
           <p class="name">
           Jane Stout
-          </p>
-          <p class="position">
-          
           </p>
       </div>
       <div class="individuals">
@@ -472,17 +431,11 @@ h2 {
           <p class="name">
           Claire Teague
           </p>
-          <p class="position">
-          
-          </p>
       </div>
       <div class="individuals">
         <img class="pic" src="individuals/Thomas, Ethel.jpg" alt="Ethel Thomas photo"/>
           <p class="name">
           Ethel Thomas
-          </p>
-          <p class="position">
-          
           </p>
       </div>
       <div class="individuals">
@@ -490,19 +443,41 @@ h2 {
           <p class="name">
           Rick Werner
           </p>
-           <p class="position">
-          
-          </p>
       </div>
     </div>  <!-- End of members -->
 
     <div id="nophoto">
-      <h2>Other Class Members - Photos Not Available</h2>
+      <h2>Other Class Members<br>
+      Photos Not Available</h2>
     </div>
     <div class="others">
       <table class="list">
         <tr>
-          <td>Sandy Carson * Veronica Davilla * Dick Dunn * Bob Furr * Margaret Furr * Margaret Graham * Reece Graham *Catherine Huemmer * Stephen Sammons</td>
+          <td>Sandy Carson</td>
+        </tr>
+        <tr>  
+          <td>Veronica Davilla</td>
+        </tr>
+        <tr>
+          <td>Dick Dunn</td>
+        </tr>
+        <tr>
+          <td>Bob Furr</td>
+        </tr>
+        <tr>
+          <td>Margaret Furr</td>
+        </tr>
+        <tr>
+          <td>Margaret Graham</td>
+        </tr>  
+        <tr> 
+          <td>Reece Graham</td>
+        </tr>
+        <tr>
+          <td>Catherine Huemmer</td>
+        </tr>
+        <tr>  
+          <td>Stephen Sammons</td>
         </tr>
       </table>
     </div>
